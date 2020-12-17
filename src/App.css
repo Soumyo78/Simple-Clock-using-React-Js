@@ -1,4 +1,31 @@
-.App {
+.navbar {
+}
+
+.u-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.u-list li{
+  float: left;
+}
+
+.u-list li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.u-list li a:hover{
+  background-color: #111;
+}
+
+#title{
   text-align: center;
 }
 

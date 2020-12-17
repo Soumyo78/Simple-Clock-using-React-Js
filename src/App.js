@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import Clock from './Clock';
 
+const titleArray = ["Digital Clock", "Stopwatch", "Timer"];
+let tempTitle = titleArray[0];
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <nav className="navbar">
+        <ul className="u-list">
+          <li id="clock-page"><a href="#clock">Clock</a></li>
+          <li id="stopwatch-page"><a href="#stopwatch">Stopwatch</a></li>
+          <li id="timer-page"><a href="#timer">Timer</a></li>
+          <li id="about-page"><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <h1 id="title">{tempTitle}</h1>
+      <Clock/>
     </div>
   );
 }
