@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <App/>,
+  <App tempTitle="Digital Clock"/>,
   document.getElementById('root')
 );
 

@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import Clock from './Clock';
 
-const titleArray = ["Digital Clock", "Stopwatch", "Timer"];
-let tempTitle = titleArray[0];
-function App() {
+// const titleArray = ["Digital Clock", "Stopwatch", "Timer"];
+// let tempTitle = titleArray[0];
+function App(props) {
   return (
     <div>
         <nav className="navbar">
@@ -15,7 +14,7 @@ function App() {
           <li id="about-page"><a href="#about">About</a></li>
         </ul>
       </nav>
-      <h1 id="title">{tempTitle}</h1>
+      <h1 id="title">{props.tempTitle}</h1>
       <Clock/>
     </div>
   );
