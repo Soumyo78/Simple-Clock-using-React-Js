@@ -1,0 +1,21 @@
+.navbar-main-container {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #0077F7;
+  width: 100%;
+  position: relative;
+}
+
+.navbar-main-container a{
+  padding: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-main-container a:hover{
+  background-color: #6098d3;
+}
