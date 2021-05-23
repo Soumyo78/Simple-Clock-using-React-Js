@@ -1,28 +1,38 @@
 import "./style.css";
-import { useEffect } from 'react';
-
-let intervalId;
-const startClock = () => {
-  intervalId = setInterval(() => {
-    const today = new Date();
-    document.getElementById("time-string").innerHTML =
-      today.toLocaleTimeString("en-US");
-  }, 1000);
-};
+import { useEffect, useRef } from "react";
 
 const ClockScreen = () => {
+  const clockContainer = useRef();
+  const dateContainer = useRef();
+
+  let intervalId;
+  const startClockAndDate = () => {
+    const currentDate = new Date();
+    intervalId = setInterval(() => {
+      const today = new Date();
+      clockContainer.current.innerHTML = today.toLocaleTimeString("en-US");
+    }, 1000);
+    dateContainer.current.innerHTML = `${currentDate.getDate()}/${currentDate.getMonth()}/${currentDate.getFullYear()}`;
+  };
 
   useEffect(() => {
-    startClock();
+    startClockAndDate();
     return () => {
       clearInterval(intervalId);
-    }
+    };
   }, []);
 
   return (
     <div className="clock-screen-main-container">
       <h1 id="title">Digital Clock</h1>
-      <div id="time-string" className="clock-container"></div>
+      <div className="clock-date-container">
+        <div ref={clockContainer} id="time-string" className="clock-container">
+          Loading ...
+        </div>
+        <div ref={dateContainer} className="date-container">
+          Loading ...
+        </div>
+      </div>
     </div>
   );
 };

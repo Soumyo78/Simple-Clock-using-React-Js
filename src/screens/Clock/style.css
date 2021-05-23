@@ -1,4 +1,4 @@
-.clock-container{
+.clock-date-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,4 +13,8 @@
   background-color: darkgoldenrod;
   color: white;
   padding: 30px;
+}
+
+.date-container{
+  font-size: 20px;
 }
